@@ -23,26 +23,26 @@ The web application provides information on books organised within bookshelves. 
 ## Instructions
 
 1. To start Vagrant
-  1. Open Terminal or cmd and browse to the vagrant folder
-  2. Type `vagrant up`
+   - Open Terminal or cmd and browse to the vagrant folder
+   - Type `vagrant up`
 2. SSH into the vagrant VM
-  1. In the same terminal type `vagrant ssh`
+   - In the same terminal type `vagrant ssh`
 3. Change to the correct folder
-  1. Type `cd /vagrant/catalog`
+   - Type `cd /vagrant/catalog`
 4. To prepare the database
-  1. Type `python database_setup.py`
-  2. Type `python lotsofbooks.py`
+   - Type `python database_setup.py`
+   - Type `python lotsofbooks.py`
 5. To run the webapp
-  1. Type `python my_project.py`
+   - Type `python my_project.py`
 
-## Expected Outcome
-1. Without logging in:
-  1. Users can view all books and bookshelves
-2. Logging in using Google or Facebook:
-  1. Users can add bookshelves
-  2. Users can update or delete bookshelves created by them
-  3. Users can add books to the bookshelves created by them
-  4. Users can update of delete books created by them 
+## Expected Outcomes
+- Without logging in:
+  - Users can view all books and bookshelves
+- Logging in using Google or Facebook:
+   - Users can add bookshelves
+   - Users can update or delete bookshelves created by them
+   - Users can add books to the bookshelves created by them
+   - Users can update of delete books created by them 
 
 ## License
 The content of this repository is licensed under [MIT License](https://opensource.org/licenses/MIT)
