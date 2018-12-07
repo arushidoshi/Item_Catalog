@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<h2> Are you sure you want to delete {{book.name}}? </h2>
+
+<form action="#" method = "POST">
+	<button type="submit" class="btn btn-danger" id="submit" type="submit">
+	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</button>
+</form>
+<a href = '{{url_for('showBooks', bookshelf_id = bookshelf_id)}}'>
+	<button class="btn btn-dark">
+	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel</button>
+</a>
+
+
+
+{% endblock %}

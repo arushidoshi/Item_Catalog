@@ -1,0 +1,93 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	
+	<div class="row divider grey">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>{{ bookshelf.name }}
+			<figure class="creator">
+				<img src="{{ creator.picture}}">
+				<figcaption>{{ creator.name }}</figcaption>
+			</figure>
+			</h1>
+
+		</div>
+	</div>
+	<div class="row padding-top padding-bottom">
+		<div class="col-md-1"></div>
+		<div class="col-md-11 padding-none">
+			
+		</div>
+		<div class="col-md-7"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					<ul>
+						{% for message in messages %}
+							 <li> <strong> {{ message }} </strong> </li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			{% endwith %}
+		</div>
+	</div>
+	{% if books !=[] %}	
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Read</h2>
+					{% for i in books %}
+						{% if i.status == 'Read' %}
+							<div class="book">
+								<h3>{{i.name}}</h3>
+								<p>{{i.description}}</p>
+								<p class="book-author">{{i.author}}</p>
+								<p class="book-genre">{{i.genre}}</p>
+							</div>
+						{% endif %}
+					{% endfor %}
+			</div>
+			<div class="col-md-4">			
+				<h2>Currently Reading</h2>
+					{% for i in books %}
+						{% if i.status == 'Currently Reading' %}
+						<div class="book">
+							<h3>{{i.name}}</h3>
+							<p>{{i.description}}</p>
+							<p class="book-author">{{i.author}}</p>
+							<p class="book-genre">{{i.genre}}</p>
+						</div>
+						{% endif %}
+					{% endfor %}
+			</div>
+			<div class="col-md-4">
+				<h2>Want to Read</h2>
+					{% for i in books %}
+						{% if i.status == 'Want to Read' %}
+						<div class="book">
+							<h3>{{i.name}}</h3>
+							<p>{{i.description}}</p>
+							<p class="book-author">{{i.author}}</p>
+							<p class="book-genre">{{i.genre}}</p>
+						</div>
+						{% endif %}
+					{% endfor %}
+				<h2>Not Read</h2>
+					{% for i in books %}
+						{% if i.status == 'Not Read' %}
+						<div class="book">
+							<h3>{{i.name}}</h3>
+							<p>{{i.description}}</p>
+							<p class="book-author">{{i.author}}</p>
+							<p class="book-genre">{{i.genre}}</p>
+						</div>
+						{% endif %}
+					{% endfor %}
+			</div>
+		</div>
+	{% endif %}
+{% endblock %}

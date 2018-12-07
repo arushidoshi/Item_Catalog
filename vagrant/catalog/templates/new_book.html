@@ -1,0 +1,56 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row divider grey">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>New Book</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 padding-top">
+			<form action="#" method = "post">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type ="text" maxlength="50" class="form-control" name="name"placeholder="Name of the book" required />
+
+					<label for="description">Description:</label>
+					<textarea class="form-control" maxlength="250" rows="3" name="description" placeholder="Description of the book" required /></textarea>
+
+					<label for="author">Author:</label>
+					<input type ="text" class="form-control" maxlength="25" name="author" placeholder="Author of the book" required />
+
+					<label for="genre">Genre:</label>
+					<input type ="text" class="form-control" maxlength="25" name="genre" placeholder="Genre of the book" required />
+
+					<label for="status">Reading Status:</label>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="status" id="status1" value="Read" required />Read
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="status" id="status2" value="Currently Reading">Currently Reading
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="status" id="status3" value="Want to Read">Want to Read
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="status" id="status4" value="Not Read">Not Read
+					  </label>
+					</div>
+					<button type="submit" class="btn btn-success" id="submit" type="submit">
+					<span class="glyphicon glyphicon-book" aria-hidden="true"></span>Create</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}
+
