@@ -18,7 +18,7 @@ The web application provides information on books organised within bookshelves. 
 
 1. Download [Virtual Box](https://www.virtualbox.org/wiki/Downloads) to run the virtual machine
 2. Download the latest build of [Vagrant](https://www.vagrantup.com/downloads.html)
-3. Clone [this](https://github.com/arushidoshi/item-catalog) repository and download it on your computer
+3. Clone [this](https://github.com/arushidoshi/Item_Catalog/) repository and download it on your computer
 
 ## Instructions
 
