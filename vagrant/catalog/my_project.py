@@ -344,7 +344,7 @@ def bookshelfJSON(bookshelf_id):
     """
     This endpoint returns all books on a bookshelf
     """
-    bookshelf = session.query(Bookshelf).filter_by(id=bookshelf_id).one()
+    bookshelf = session.query(Bookshelf).filter_by(id=bookshelf_id).one_or_none()
     books = session.query(Book).filter_by(bookshelf_id=bookshelf.id).all()
     return jsonify(Book=[i.serialize for i in books])
 
@@ -355,7 +355,7 @@ def bookJSON(bookshelf_id, book_id):
     This endpoint returns data for a particular book
     """
     book = session.query(Book).filter_by(
-        bookshelf_id=bookshelf_id, id=book_id).one()
+        bookshelf_id=bookshelf_id, id=book_id).one_or_none()
     return jsonify(Book=book.serialize)
 
 
